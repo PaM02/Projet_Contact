@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="themes/A.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="lib/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/index.css">
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="cordova.js"></script>
+        <title>Contacts</title>
+    </head>
+
+    <body>
+        <div data-role="page" id="page1">
+            <div data-role="header">
+                <h1>Contacts</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <a id="addContact" href="#page2" data-role="button" data-icon="arrow-r"
+                            data-iconpos="right">Ajouter</a>
+                    </div>
+                </div>
+                <ul id="contactList" data-role="listview" data-inset="true" data-filter="true"
+                    data-filter-placeholder="recherche">
+
+                </ul>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Dic3 with &#10083; &copy; 2023</h1>
+            </div>
+        </div>
+        <div data-role="page" id="page2">
+            <div data-role="header">
+                <a href="#page1" class="ui-btn" data-rel="back" data-icon="arrow-l"></a>
+                <h1>Ajouter contact</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <form id="formAdd">
+                    <div class="ui-field-contain">
+                        <label>Nom</label>
+                        <input type="text" name="nom" id="nom" /><br />
+                        <label>Prenom</label>
+                        <input type="text" name="prenom" id="prenom" />
+                        <label>Tel</label>
+                        <input type="text" name="tel" id="tel" />
+                    </div>
+                    <div class="ui-grid-b"><button class="ui-block-b" onclick="createContact()">Ajouter</button></div>
+                </form>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Dic3 with &#10083; &copy; 2023</h1>
+            </div>
+        </div>
+        <div data-role="page" id="page3">
+            <div data-role="header">
+                <a href="#" class="ui-btn" data-rel="back"></a>
+                <h1>Modifier contact</h1>
+            </div>
+            <div data-role="main" class="ui-content" id="contactDetail">
+
+            </div>
+        </div>
+    </body>
+
+</html>
